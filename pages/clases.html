@@ -25,7 +25,6 @@
             <h6>Subtitulo</h6>
         </section>
         <section>
-
             <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur adipisicing elit. Eos, vel aliquam. Dicta a eum dolorem, architecto officiis tenetur esse, voluptates alias at reiciendis nesciunt, sint consequuntur harum dolore natus <em>est</em>!</p>
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Logo Google">
         </section>
@@ -40,14 +39,115 @@
             <li>Elemento 5</li>
         </ul>
     </aside>
+    <section>
+        <h2>Clase 3</h2>
+        <h3>Formularios</h3>
+        <form action="https://www.google.com" target="_blank" method="get">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombreid">Nombre</label>
+                    <input type="text" id="nombreid" name="nombre" placeholder="Ingrese su nombre" required minlength="4">
+                </div>
+                <div>
+                    <label for="apellidoid">Apellido</label>
+                    <input type="text" id="apellidoid" name="apellido" placeholder="Ingrese su apellido">
+                </div>
+                <div>
+                    <label for="emailid">Email</label>
+                    <input type="email" id="emailid" name="email" placeholder="Ingrese su email">
+                </div>
+                <div>
+                    <label for="ageid">Edad</label>
+                    <input type="number" id="ageid" name="age" placeholder="Ingrese su edad" required min="18">
+                </div>
+                <div>
+                    <label for="paisid">Pais</label>
+                    <select name="pais" id="paisid">
+                        <optgroup>
+                            <option value="arg">Argentina</option>
+                            <option value="bra">Brasil</option>
+                            <option value="uru">Uruguay</option>
+                            <option value="chi">Chile</option>
+                        </optgroup>
+                        <optgroup>
+                            <option value="usa">Estados Unidos</option>
+                            <option value="can">Canada</option>
+                            <option value="mex">Mexico</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                </div>
+            </fieldset>
+            <div>
+                <label for="comentid">Comentario</label>
+                <br>
+                <textarea name="comentario" id="comentid" cols="30" rows="10" placeholder="Ingrese su comentario"></textarea>
+            </div>
+            <div>
+                <label for="dateid"> Fecha de nacimiento </label>
+                <input type="datetime-local" name="date" id="dateid">
+            </div>
+            <div>
+                <label for="alumnoid">Alumno</label>
+                <input type="checkbox" name="alumno" id="alumnoid">
+            </div>
+            <div>
+                <label for="mañanaid">Mañana</label>
+                <input type="radio" name="turn" id="mañanaid">
+                <label for="tardeid">Tarde</label>
+                <input type="radio" name="turn" id="tardeid">
+                <label for="nocheid">Noche</label>
+                <input type="radio" name="turn" id="nocheid">
+            </div>
+            <div>
+                <label for="fileid">Archivo</label>
+                <input type="file" name="file" id="fileid">
+            </div>
+        </form>
+    </section> 
+    <section>
+        <h3>Tablas</h3>
+        <table border="2">
+            <caption>Tabla de alumnos</caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Edad</th>
+                    <th>Pais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Nombre y apellido 1</td>
+                    <td> Email 1</td>
+                    <td>Edad 1</td>
+                    <td>Pais 1</td>
+                </tr>
+                <tr>
+                    <td>Nombre 2</td>
+                    <td>Apellido 2</td>
+                    <td> Email 2</td>
+                    <td>Edad 2</td>
+                    <td>Pais 2</td>
+            </tbody>
+        </table>
+    </section> 
+</body>
+
+
     <footer>
-        <p>DAW 2021</p>
+        <p>---DAW 2024-------------------------------------------------------------------------------------------------------
+        </p>
         <a href="https://www.google.com">Google</a>
-        <br>
         <a href="https://www.google.com" target="_blank">Google</a>
-        <br>
         <p> Para ir a contactos hacer click <a href="pages/contactos.html">aqui</a></p>
-        
     </footer>
+
 </body>
 </html>
