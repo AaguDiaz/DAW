@@ -4,6 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clases</title>
+        <style>
+            h1 {
+                background-color: burlywood;
+                color: white;
+            }
+        </style>
+        <link rel="normalize" href="../normalize.css">
+        <link rel="stylesheet" href="../style.css">
     </head>
     <body>
         <header>
@@ -16,23 +24,25 @@
         </header>
             
         <main>
-            <section> //Clase 2
+            <h2 style="color: brown ;" !important>Clase 2</h2>
+            <section> <!--Clase 2-->
                 <h1>Titulo</h1> 
                 <h2>Subtitulo</h2>
                 <h3>Subtitulo</h3>
                 <h4>Subtitulo</h4>
                 <h5>Subtitulo</h5>
                 <h6>Subtitulo</h6>
-            </section>
-            <section>
+
                 <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur adipisicing elit. Eos, vel aliquam. Dicta a eum dolorem, architecto officiis tenetur esse, voluptates alias at reiciendis nesciunt, sint consequuntur harum dolore natus <em>est</em>!</p>
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Logo Google">
             </section>
-            <section> // Clase 3
-                <h2>Clase 3</h2>
-                <h3>Formularios</h3>
-                <form action="https://www.google.com" target="_blank" method="get">
-                    <fieldset>
+            <h2>Clase 3</h2>
+            <section> <!-- Clase 3-->
+                <article>
+
+                    <h3>Formularios</h3>
+                    <form action="https://www.google.com" target="_blank" method="get">
+                        <fieldset>
                         <legend>Datos personales</legend>
                         <div>
                             <label for="nombreid">Nombre</label>
@@ -96,40 +106,65 @@
                         <label for="fileid">Archivo</label>
                         <input type="file" name="file" id="fileid">
                     </div>
-                </form>
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Tablas</h3>
+                    <table border="2">
+                        <caption>Tabla de alumnos</caption>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Edad</th>
+                                <th>Pais</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">Nombre y apellido 1</td>
+                                <td> Email 1</td>
+                                <td>Edad 1</td>
+                                <td>Pais 1</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre 2</td>
+                                <td>Apellido 2</td>
+                                <td> Email 2</td>
+                                <td>Edad 2</td>
+                                <td>Pais 2</td>
+                        </tbody>
+                    </table>
+                </article> 
             </section> 
-            <section>
-                <h3>Tablas</h3>
-                <table border="2">
-                    <caption>Tabla de alumnos</caption>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Email</th>
-                            <th>Edad</th>
-                            <th>Pais</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2">Nombre y apellido 1</td>
-                            <td> Email 1</td>
-                            <td>Edad 1</td>
-                            <td>Pais 1</td>
-                        </tr>
-                        <tr>
-                            <td>Nombre 2</td>
-                            <td>Apellido 2</td>
-                            <td> Email 2</td>
-                            <td>Edad 2</td>
-                            <td>Pais 2</td>
-                    </tbody>
-                </table>
-            </section> 
-            <section> //Clase 4
-                <h2>Clase 4</h2>
-                
+            <h2>Clase 4</h2>
+            <section id="seccion-clase04">
+                <h3 style="background-color: blueviolet; color: white;" > Hola </h3>
+                <li class="firstclase">Elemento 1</li>
+                <li id="element2">Elemento 2</li>
+                <p>sadsad 3</p>
+                <p>ElGfsaFsaf</p>
+
+                <div>
+                    <div id="ide1" class="child">
+                        <p>Elemento 1</p>
+                    </div>
+                    <div id="ide2" class="child">
+                        <p>Elemento 2</p>
+                    </div>
+                    <div class="child">
+                        <p>Elemento 3</p>
+                    </div>
+                </div>
+
+                <div class="Opta-Bars-Full">
+                    <span class="Opta-Percent Opta-Home Opta-Team-178" style="width:33%">32,7&nbsp;%
+                    </span>
+                    <span class="Opta-Percent Opta-Away Opta-Percent-bigger Opta-Team-149" style="width:67%">67,3&nbsp;%
+                    </span>
+                </div>
             </section>
         </main>
         <aside>
