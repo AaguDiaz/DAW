@@ -1,0 +1,252 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    background-color: #ffffff;
+    display: flex;
+    text-align: center;
+}
+.header .logo {
+    width: 100%;
+    height: 40px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .logo a{
+    color: #000000;
+    text-decoration: none;
+}
+.header .menu-mobile img {
+    width: 44px;
+    height: 44px;
+    position:absolute;
+    top: 0.5%;
+    left: 1%;
+    display: block;
+}
+.menu{
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+}
+.menu a{
+    margin: 0 10px;
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .publicidad{
+    width: 100%;
+    background-color: #f5f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .publicidad img{
+    width: 100%;
+    height: 100%;
+}
+.publicidad .desktop{
+    display: none;
+}
+
+.main .noticias {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.noticias article{
+    width: 100%;
+    margin: 5px 0px;
+    border-bottom: 1px solid #0000006e;
+    position: relative;
+}
+
+.noticias article a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: #000000;
+    display: block;
+    text-decoration: none;
+}
+article img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+article h1{
+    font-size: 24px;
+}
+article h2{
+    font-size: 20px;
+}
+
+.titulo{
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.titulo span{
+    color: #ff0000;
+    font-size: 32px;
+}
+footer{
+    width: 100%;
+    border-top: 1px solid #000000;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contenedor-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-footer .logo{
+    width: 100%;
+    height: 40px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-footer .logo a{
+    color: #000000;
+    text-decoration: none;
+}
+
+@media (min-width: 1080px) {
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .main .publicidad{
+        width: 10%;
+        height: auto;
+        margin-right: 10px;
+        gap: 100px;
+    }
+
+    .publicidad .mobile{
+        display: none;
+    }
+
+    .publicidad .desktop{
+        display: inline-block;
+    }
+
+    .layout{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .noticias article{
+        border: none;
+    }
+
+    .noticias-ahora{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .principal{
+        width: 75%;
+        height: auto;
+        flex: 3;
+    }
+    
+    .secundarias{
+        width: 15%;
+        height: auto;
+        flex: 1;
+    }
+
+    .noticias-ahora{
+        border-bottom: 1px solid #0000006e;
+    }
+
+    .secciones{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+    
+    }
+
+    .noticias.economia, .noticias.politica{
+        border-bottom: 1px solid #0000006e;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+
+    }
+
+
+
+    .articulos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .titulo{
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+        align-self: flex-start;
+        flex: 2;
+    }
+
+    .noti{
+        width: 48%;
+        flex: 1;
+        align-self: flex-end;
+    }
+
+
+}
