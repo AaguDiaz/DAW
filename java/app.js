@@ -1,19 +1,40 @@
-var nombre = "Agustin";
-console.log(typeof nombre); // string
+console.log(document.title)
 
-var nacimiento = 2003;
-var actual = 2024;
+document.title = 'New Title'
 
-var resto = 6 % 4;
-console.log(resto); // 2
+console.log(document.getElementById('title'));
 
-var resultado = 5 < 4;
-console.log(resultado); // false
+var tittle = document.getElementById('title');
+
+console.log(tittle);
+
+tittle.textContent = 'Lista de Tareas';
+
+//querys
+
+var elements = document.querySelectorAll(".task");
+console.log(elements);
+
+//insertar elementos
+var newTask = document.createElement('li');
+var list = document.querySelector('ul');
+list.insertAdjacentElement('beforeend', newTask);
 
 
-var num1 = 5;
-var num2 = 10;
-function multiplicar(num1, num2) {
-    var resultado = num1 * num2;
-    return resultado;
+document.getElementById('form').addEventListener('submit', addtolist );
+
+function addtolist(e) {
+    e.preventDefault(); // Evita que la página se recargue al enviar el formulario
+
+    var nextTask = document.getElementById('nextTask').value; // Obtiene el valor del input text
+    var ul = document.querySelector('ul'); // Selecciona la lista ul
+
+    var li = document.createElement('li'); // Crea un nuevo elemento li
+    li.className = 'task'; // Agrega la clase 'task' al elemento li
+    li.textContent = nextTask; // Agrega el texto del input text al elemento li
+
+    ul.appendChild(li); // Agrega el nuevo elemento li a la lista ul
+
+    document.getElementById('nextTask').value = ''; // Limpia el input text
 }
+

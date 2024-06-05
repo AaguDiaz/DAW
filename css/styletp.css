@@ -142,6 +142,53 @@ footer{
     text-decoration: none;
 }
 
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1sus{
+    margin: 10px;
+    text-align: center;
+}
+
+.h2sus{
+    text-align: center;
+    font-size: medium;
+}
+
+.datos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.lb{
+    margin: 20px;
+}
+
+.perror{
+    text-align: center;
+}
+
 @media (min-width: 1080px) {
 
     .menu-mobile {
@@ -248,5 +295,15 @@ footer{
         align-self: flex-end;
     }
 
-
+    .datos {
+        width: 48%; /* Ocupa la mitad del ancho */
+        float: left; /* Alineación a la izquierda */
+    }
+    .contenedor-form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
