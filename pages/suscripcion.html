@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex</title>
+    <link rel="normalize" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styletp.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="portada.html">Vortex</a>
+        </div>
+        <div class="menu-mobile">
+            <img src="../imagenes/hamburgermenu_120234.png" alt="burgermenu">
+        </div>
+        
+    </header>
+    <main class="main">
+        <section class="formulario">
+            <h1 class="h1sus">Datos personales</h1>
+            <h2 class="h2sus" id="h2sus"></h2>
+            <form id="susformulario">
+                <div class="contenedor-form">
+                    <div class="datos">
+                        <label class="lb" for="nombre">Nombre completo:</label>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </div>
+                    <p class="perror" id="nomerror"></p>
+                    <div class="datos">
+                        <label class="lb" for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <p class="perror" id="emailerror"></p>
+                    <div class="datos">
+                        <label class="lb" for="password">Contraseña:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <p class="perror" id="passerror"></p>
+                    <div class="datos">
+                        <label class="lb" for="edad">Edad:</label>
+                        <input type="number" name="edad" id="edad" required>
+                    </div>
+                    <p class="perror" id="edaderror"></p>
+                    <div class="datos">
+                        <label class="lb" for="telefono">Telefono:</label>
+                        <input type="tel" name="telefono" id="telefono" required>
+                    </div>
+                    <p class="perror" id="telerror"></p>
+                    <div class="datos">
+                        <label class="lb" for="direccion">Direccion:</label>
+                        <input type="text" name="direccion" id="direccion" required>
+                    </div>
+                    <p class="perror" id="direerror"></p>
+                    <div class="datos">
+                        <label class="lb" for="ciudad">Ciudad:</label>
+                        <input type="text" name="ciudad" id="ciudad" required>
+                    </div>
+                    <p class="perror" id="ciudaderror"></p>
+                    <div class="datos">
+                        <label class="lb" for="codpostal">Código postal:</label>
+                        <input type="number" name="codpostal" id="codpostal" required>
+                    </div>
+                    <p class="perror" id="cperror"></p>
+                    <div class="datos">
+                        <label class="lb" for="DNI">DNI:</label>
+                        <input type="number" name="DNI" id="DNI" required>
+                    </div>
+                    <p class="perror" id="dnierror"></p>
+                    <button id="submit" class="lb" type="submit">Suscribirme</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="logo">
+                <a href="../index.html">Vortex</a>
+            </div>
+            <div class="copi">
+                <p>© 2024 Vortex. Todos los derechos reservados</p>
+            </div>
+            <div class="redes">
+                <a href="#"><img src="../imagenes/icons8-facebook-nuevo-50.png" alt="facebook"></a>
+                <a href="#"><img src="../imagenes/icons8-x-50.png" alt="twitter"></a>
+                <a href="#"><img src="../imagenes/icons8-instagram-50.png" alt="instagram"></a>
+                <a href="#"><img src="../imagenes/icons8-youtube-50.png" alt="youtube"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../java/subs.js"></script>
+</body>
+</html>
