@@ -10,6 +10,22 @@ var cpinput = document.getElementById('codpostal');
 var dniinput = document.getElementById('DNI');
 
 
+window.onload = function() {
+    // Verificar si hay datos en LocalStorage
+    var datosGuardados = localStorage.getItem('datos_sus');
+    if (datosGuardados) {
+        var datos = JSON.parse(datosGuardados);
+        document.getElementById('nombre').value = datos.nombre || '';
+        document.getElementById('email').value = datos.email || '';
+        document.getElementById('edad').value = datos.edad || '';
+        document.getElementById('telefono').value = datos.telefono || '';
+        document.getElementById('direccion').value = datos.direccion || '';
+        document.getElementById('ciudad').value = datos.ciudad || '';
+        document.getElementById('codpostal').value = datos.cp || '';
+        document.getElementById('DNI').value = datos.dni || '';
+    }
+};
+
 nombreinput.addEventListener('blur', handleBlur);
 function validarnombre(){
     var nombre = nombreinput.value.trim();
@@ -257,9 +273,10 @@ function handleBlur(event) {
     }
 }
 
-form.addEventListener('submit',
-function(e){
-    e.preventDefault();
+form.addEventListener('submit', enviar);
+
+async function enviar(event){
+    event.preventDefault();
    
     var errores = false;
     if(!validarnombre()){
@@ -294,15 +311,49 @@ function(e){
             cp: cpinput.value.trim(),
             dni: dniinput.value.trim()
         };
-        var mensaje = '';
-        for (var key in datos) {
-            if (datos.hasOwnProperty(key)) {
-                mensaje += key + ': ' + datos[key] + '\n';
+
+        var url = 'https://jsonplaceholder.typicode.com/users';
+
+        try {
+            var respuesta = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datos)
+            });
+
+            var data = await respuesta.json();
+
+            if (respuesta.ok) {
+                Swal.fire({
+                    title: 'Suscripción exitosa!',
+                    text: 'Gracias por suscribirte. Aquí están tus datos:\n\n' + JSON.stringify(data, null, 2),
+                    icon: 'success'
+                }).then(function() {
+                    localStorage.setItem('datos_sus', JSON.stringify(data));
+                    form.reset();
+                });
+            } else {
+                Swal.fire({
+                    title: 'Error en la suscripción',
+                    text: 'Hubo un problema al procesar tu suscripción. Por favor, intenta nuevamente.',
+                    icon: 'error'
+                });
             }
+        } catch (error) {
+            Swal.fire({
+                title: 'Error en la suscripción',
+                text: 'Hubo un problema al procesar tu suscripción. Por favor, intenta nuevamente.',
+                icon: 'error'
+            });
         }
-        window.alert(mensaje);
-    }else{
-        window.alert("Datos incorrectos, por favor revisar los campos.");
+    } else {
+        Swal.fire({
+            title: 'Errores en el formulario',
+            text: 'Por favor, revise los campos con errores.',
+            icon: 'error'
+        });
     }
 
-});
+};
