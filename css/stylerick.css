@@ -1,0 +1,81 @@
+*{
+    font-family: 'Arial';
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+.cabecera{
+    border-bottom: 1px solid #141414;
+    box-shadow: 1px 5px 10px #141414;
+    border-bottom: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.botones{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5%;
+    background-color: rgb(144, 192, 243);
+    color: rgb(0, 0, 0);
+    font-family: 'Arial';
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#filtros{
+    display: none;
+}
+
+.filtros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.personajes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.personaje {
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgb(172, 172, 172);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.personaje img {
+    width: 100%;
+}
+
+.personaje h3 {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.personaje p {
+    margin: 8px 0;
+    font-size: 14px;
+}
